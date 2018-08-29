@@ -3,9 +3,9 @@ package us.mattgreen;
 import java.util.ArrayList;
 
 /**
+ * The run class of the animals project
  * @author Matt Green
  * @version 1.0.0
- * Created by mgreen14 on 12/27/17.
  */
 
 public class Main {
@@ -35,6 +35,10 @@ public class Main {
         }
     }
 
+    /**
+     * A method to print the name and sound made of a Talkable to the console and write them to a file
+     * @param p the Talkable for the operation to be ran on
+     */
     public static void printOut(Talkable p)  {
         System.out.println(p.getName() + " says=" + p.talk());
         outFile.fileWrite(p.getName() + "|" + p.talk());

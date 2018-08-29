@@ -16,8 +16,9 @@ public class FileInput {
     private String fileName;
 
     /**
-     *
-     * @param fileName
+     * constructor to create a new instance of FileInput
+     * @param fileName the file to be read
+     * @throws FileNotFoundException when fileName cannot be located
      */
     public FileInput(String fileName) {
         this.fileName = fileName;
@@ -28,6 +29,10 @@ public class FileInput {
         }
     }
 
+    /**
+     * Prints all lines of the file until a blank line is reached
+     * @throws Exception when method is unable to write
+     */
     public void fileRead() {
         String line;
         try {
@@ -39,6 +44,12 @@ public class FileInput {
         }
     }
 
+    /**
+     * Returns a single line of the input file
+     * @return a string containing the contents of a line up to any line termination or null characters
+     * @throws Exception when method is unable to write
+     */
+
     public String fileReadLine() {
         try {
             String line = in.readLine();
@@ -49,6 +60,9 @@ public class FileInput {
         }
     }
 
+    /**
+     * closes the input file
+     */
     public void fileClose() {
         if (in != null) {
             try {

@@ -3,15 +3,20 @@ package us.mattgreen;
 import java.io.*;
 
 /**
+ * Class to write to a file
  * @author Matt Green
  * @version 1.0.0
- * Created by mgreen14 on 12/27/17.
  */
 public class FileOutput {
 
     Writer out = null;
     private String fileName;
 
+    /**
+     * Constructor to create a new instance of FileOutput
+     * @param fileName The name of the file to be written to
+     * @throws FileNotFoundException when fileName cannot be located
+     */
     public FileOutput(String fileName) {
         this.fileName = fileName;
         try {
@@ -22,6 +27,11 @@ public class FileOutput {
         }
     }
 
+    /**
+     * Method to write string to file
+     * @param line the string to be written to the file
+     * @throws Exception when the file cannot be written to
+     */
     public void fileWrite(String line) {
         try {
             out.write(line+"\n");
@@ -31,6 +41,9 @@ public class FileOutput {
         }
     }
 
+    /**
+     * Closes the output file
+     */
     public void fileClose() {
         if (out != null) {
             try {

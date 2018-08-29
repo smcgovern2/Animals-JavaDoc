@@ -28,7 +28,7 @@ public class Dog extends Pet implements Talkable {
 
     /**
      * Returns the sound that the dog makes
-     * @return Bark
+     * @return "Bark"
      */
     @Override
     public String talk() {
