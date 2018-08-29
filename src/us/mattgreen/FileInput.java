@@ -6,15 +6,19 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
+ * This class receives input from a file
  * @author Matt Green
  * @version 1.0.0
- * Created by mgreen14 on 12/27/17.
  */
 public class FileInput {
 
     private BufferedReader in = null;
     private String fileName;
 
+    /**
+     *
+     * @param fileName
+     */
     public FileInput(String fileName) {
         this.fileName = fileName;
         try {
