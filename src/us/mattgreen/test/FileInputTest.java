@@ -12,7 +12,7 @@ public class FileInputTest extends TestCase{
     }
 
     public void testFileReadLine(){
-        assertSame("Test result 0", input.fileReadLine());
+        assertEquals("Test result 0", input.fileReadLine());
     }
 
 

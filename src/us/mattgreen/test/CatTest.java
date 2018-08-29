@@ -20,7 +20,7 @@ public class CatTest extends TestCase {
     }
 
     public void testTalk(){
-        assertSame("Meow", cat1.talk());
+        assertEquals("Meow", cat1.talk());
     }
 
 

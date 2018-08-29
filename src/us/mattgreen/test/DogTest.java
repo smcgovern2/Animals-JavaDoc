@@ -18,7 +18,7 @@ public class DogTest extends TestCase {
     }
 
     public void testTalk(){
-        assertSame("Bark", dog1.talk());
+        assertEquals("Bark", dog1.talk());
     }
 
 
